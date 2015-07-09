@@ -1,0 +1,22 @@
+<form name="someForm" ng-submit="mgr.submitForm()">
+  (Check out the original question collection from the server <a href="questions.json" target="_blank">here</a>.)
+  <hr>
+  <header>
+    <h3>Please fill out the following questions.</h3>
+  </header>
+  <section ng-if="!mgr.error">
+    <div ng-repeat="question in mgr.questions"
+      question="question" ordinal="$index+1" is-sub-question="false">
+    </div>
+  </section>
+  <section ng-if="mgr.error">
+    <span ng-bind="mgr.error"></span>
+  </section>
+  <section>
+    <button type="submit" ng-disabled="someForm.$invalid">Submit</button>
+    <button type="button">Save</button>
+  </section>
+  <h1><hr></h1>
+  <button type="button" ng-click="showAnswers=!showAnswers">Check answers</button>
+  <json-view target="mgr.questions" ng-show="showAnswers" />
+</form>

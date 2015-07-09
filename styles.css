@@ -1,0 +1,21 @@
+body {
+  font: normal 1em/1.7 "Open Sans", Helvetica, Arial, sans-serif;
+  color: #333333;
+}
+
+.question {
+  border-radius: 5px;
+  border-color: #333333;
+  border-width: 1px;
+  border-style: solid;
+  background-color: #F5F5F5;
+  padding: 10px;
+}
+
+.question h4 {
+  margin: 0 auto;
+}
+
+.question.sub {
+  margin-left: 20px;
+}

@@ -1,0 +1,14 @@
+<form name="q_{{qc.question.id}}" class="question" ng-class="{sub: qc.isSubQuestion}">
+  <h4>
+    <span ng-bind="qc.ordinal"></span>.
+    <span ng-bind="qc.question.title"></span>
+  </h4>
+
+  <div options="qc.question.options" type="qc.question.type"
+    on-selection="qc.answerChanged(choice)"></div>
+
+  <div ng-repeat="question in qc.question.subQuestions"
+    question="question" ordinal="$index+1" is-sub-question="true"
+    ng-if="qc.question.answer && (!question.parentOptionId || qc.question.answer===question.parentOptionId)">
+  </div>
+</form>

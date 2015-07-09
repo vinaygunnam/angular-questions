@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Are you working?",
+    "ordinal": 2,
+    "type": "radio",
+    "options": [
+      {
+        "id": 1,
+        "title": "Yes"
+      },
+      {
+        "id": 2,
+        "title": "No"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Describe your work.",
+    "type": "essay",
+    "parentQuestionId": 5,
+    "parentOptionId": 9
+  },
+  {
+    "id": 3,
+    "title": "What is your name?",
+    "ordinal": 1,
+    "type": "text"
+  },
+  {
+    "id": 4,
+    "title": "What are your hobbies?",
+    "ordinal": 3,
+    "type": "checkbox",
+    "options": [
+      {
+        "id": 3,
+        "title": "Photography"
+      },
+      {
+        "id": 4,
+        "title": "Gaming"
+      },
+      {
+        "id": 5,
+        "title": "Painting"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Select your work domain.",
+    "type": "radio",
+    "options": [
+      {
+        "id": 6,
+        "title": "Software"
+      },
+      {
+        "id": 7,
+        "title": "Management"
+      },
+      {
+        "id": 8,
+        "title": "Hardware"
+      },
+      {
+        "id": 9,
+        "title": "Other"
+      }
+    ],
+    "parentQuestionId": 1,
+    "parentOptionId": 1
+  },
+  {
+    "id": 6,
+    "title": "How old are you?",
+    "type": "number",
+    "parentQuestionId": 3
+  }
+]

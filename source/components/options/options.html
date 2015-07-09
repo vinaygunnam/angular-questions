@@ -1,0 +1,33 @@
+<div>
+  <section ng-if="oc.type === 'radio'">
+    <label ng-repeat="option in oc.options">
+      <input type="radio" ng-model="oc.selection" required
+        ng-value="option.id" ng-change="oc.onSelectionChanged()">
+      <span ng-bind="option.title"></span>
+    </label>
+  </section>
+
+  <section ng-if="oc.type === 'checkbox'">
+    <label ng-repeat="option in oc.options">
+      <input type="checkbox" checklist-model="oc.selection"
+        ng-required="!oc.selection.length"
+        checklist-value="option.id" ng-change="oc.onSelectionChanged()">
+      <span ng-bind="option.title"></span>
+    </label>
+  </section>
+
+  <section ng-if="oc.type === 'text'">
+    <input type="text" ng-model="oc.selection" required
+      ng-change="oc.onSelectionChanged()" />
+  </section>
+
+  <section ng-if="oc.type === 'number'">
+    <input type="number" ng-model="oc.selection" required
+      ng-change="oc.onSelectionChanged()" />
+  </section>
+
+  <section ng-if="oc.type === 'essay'">
+    <textarea name="answer" rows="10" cols="50" required
+      ng-model="oc.selection" ng-change="oc.onSelectionChanged()"></textarea>
+  </section>
+</div>
