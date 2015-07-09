@@ -2,7 +2,7 @@ function question(RecursionHelper) {
   var directive = {
     restrict: 'EA',
     replace: true,
-    templateUrl: '/source/components/question/question.html',
+    templateUrl: 'source/components/question/question.html',
     scope: {},
     bindToController: {
       question: '=',
