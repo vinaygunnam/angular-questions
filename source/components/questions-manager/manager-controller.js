@@ -3,7 +3,7 @@ function managerController($http) {
 
   // fetch all questions
   var promise = $http({
-    url: '/questions.json',
+    url: 'questions.json',
     method: 'GET'
   });
 
